@@ -85,3 +85,6 @@ Route::prefix('v1/devices')->name('devices.')->group(function () {
 // 1. URL -> http://127.0.0.1:8000/api/v1/temperature
 Route::get('v1/temperature', [TemperatureController::class, 'getData']);
 Route::post('v1/temperature', [TemperatureController::class, 'insertData']);
+Route::put('v1/temperature/{id}', [TemperatureController::class, 'updateData']);
+Route::delete('v1/temperature/{id}', [TemperatureController::class, 'deleteData']);
+
